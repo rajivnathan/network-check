@@ -11,10 +11,10 @@ func main() {
 
 	requestURLs := []string{"http://www.amazon.com", "http://www.google.com"}
 
-	for _, url := range requestURLs {
-		fmt.Printf("client: GET REQUEST TO %s\n", url)
+	for _, requestURL := range requestURLs {
+		fmt.Printf("client: GET REQUEST TO %s\n", requestURL)
 
-		req, err := http.NewRequest(http.MethodGet, requestURLs, nil)
+		req, err := http.NewRequest(http.MethodGet, requestURL, nil)
 		if err != nil {
 			fmt.Printf("client: could not create request: %s\n", err)
 			os.Exit(1)
